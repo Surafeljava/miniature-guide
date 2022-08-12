@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import GameOfLife from "./game-of-life/GameOfLife";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex w-full min-h-screen justify-center items-center">
+
+      <Router>
+        <div>
+          <Routes>
+            <Route path="/" element={<div> Home </div>}/>
+            <Route path="/game" element={<GameOfLife/>}/>
+          </Routes>
+
+          <div className="w-full fixed top-6 left-0 flex justify-center gap-4 px-4">
+            <Link to="/" className="px-4 py-2 rounded-lg bg-slate-300">Home</Link>
+            <Link to="/game" className="px-4 py-2 rounded-lg bg-slate-300">Game</Link>
+          </div>
+        </div>
+      </Router>
+
+
     </div>
   );
 }
