@@ -3,20 +3,22 @@ import { useRef, useState } from "react";
 import produce from "immer";
 
 const mainBoxPadding = 80;
-const mainBoxWidth = 1400;
-const mainBoxHeight = 830;
+const mainBoxWidth = 1200;
+const mainBoxHeight = 800;
 
 const targetSize = 300;
 const targetPadding = 300;
 
-const incBy = 5;
+const beeSpeed = 5;
 // const numRobots = 50;
 
 function Beeclust() {
 
     const [running, setRunning] = useState(false);
+
     const [numRobots, setNumRobots] = useState(100);
     const [beeSize, setBeeSize] = useState(10);
+    // const [beeSpeed, setBeeSpeed] = useState(5);
 
     const runningRef = useRef(running);
     runningRef.current = running;
@@ -36,13 +38,13 @@ function Beeclust() {
                 }else{
                     const r = rob[i];
                     const an = r.angle;
-                    const xinc = incBy * Math.sin(an);
-                    const yinc = incBy * Math.cos(an);
+                    const xinc = beeSpeed * Math.sin(an);
+                    const yinc = beeSpeed * Math.cos(an);
 
                     const newx = r.x + xinc;
                     const newy = r.y + yinc;
 
-                    if (newx>(mainBoxPadding+3) && newx<(1400 - beeSize) && newy>(mainBoxPadding+3) && newy<(830 - beeSize)){
+                    if (newx>(mainBoxPadding+3) && newx<(mainBoxWidth - beeSize) && newy>(mainBoxPadding+3) && newy<(mainBoxHeight - beeSize)){
                         robCopy[i].x = newx;
                         robCopy[i].y = newy;
                     }else{
@@ -83,11 +85,11 @@ function Beeclust() {
     return (
         <div className="relative w-full min-h-screen">
             {robots.map((robot, idx) => 
-            // <Bee initialX={robot.x} initialY={robot.y} angle={robot.angle}/>
-            <div style={{width: beeSize, height: beeSize, top: robot.y, left: robot.x}} className="bg-slate-600 absolute rounded-xl z-20">
-        </div>
+                //The Bee
+                <div style={{width: beeSize, height: beeSize, top: robot.y, left: robot.x}} className="bg-slate-600 absolute rounded-xl z-30">
+                </div>
             )}
-            <div className="absolute bottom-10 w-full flex justify-center gap-4">
+            <div className="fixed bottom-10 w-full flex justify-start pl-20 gap-4">
 
                 <div className="flex flex-col">
                     <div className="text-black">
@@ -128,25 +130,35 @@ function Beeclust() {
                         setRobots(bees);
                         // setRobotsPos(bees);
                         runCollitionDetection();
+                    }else{
+                        setRobots([]);
+                        setRunning(false);
                     }
                 }} className="px-4 py-2 rounded-lg bg-red-200">
-                    Run Simulation
+                    {running ?  "Stop Simulation" : robots.length>0 ? "Restart" :  "Run Simulation"}
                 </button>
-                <button 
-                onClick={() => {
-                    setRobots([]);
-                    setRunning(false);
-                }}
-                className="px-4 py-2 rounded-lg bg-slate-200">
-                    Stop
-                </button>
+                
+                {(running || robots.length>0) && (
+                    <button 
+                    onClick={() => {
+                        setRunning(!running);
+                        if(!running){
+                            runningRef.current = true;
+                            runCollitionDetection();
+                        }
+                    }}
+                    className="px-4 py-2 rounded-lg bg-slate-200">
+                        {running ? "Pause" : "Resume"}
+                    </button>
+                )}
 
                 <div className="fixed z-10 bg-red-200 rounded-full flex justify-center items-center" 
                 style={{top:targetPadding, left:targetPadding, width: targetSize, height: targetSize}}>
                     Optimal Place
                 </div>
 
-                <div className="fixed z-0 bg-red-100 border-2 border-slate-700" style={{width: 1320, height: 750, top:mainBoxPadding, left:mainBoxPadding}}></div>
+                <div className="fixed z-0 bg-red-100 border-2 border-slate-700" 
+                style={{width: (mainBoxWidth-mainBoxPadding), height: (mainBoxHeight-mainBoxPadding), top:mainBoxPadding, left:mainBoxPadding}}></div>
             </div>
         </div>
     );

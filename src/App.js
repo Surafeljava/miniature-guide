@@ -15,7 +15,7 @@ function App() {
             <Route path="/beeclust" element={<Beeclust/>}/>
           </Routes>
 
-          <div className="w-full fixed top-6 left-0 flex justify-center gap-4 px-4">
+          <div className="w-full fixed top-6 left-0 flex justify-start gap-4 pl-20">
             <Link to="/" className="px-4 py-2 rounded-lg bg-slate-300">Home</Link>
           </div>
         </div>
