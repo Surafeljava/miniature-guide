@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import GameOfLife from "./game-of-life/GameOfLife";
 import Beeclust from "./beeclust/Beeclust";
+import TetrisGame from "./tetris-game/TetrisGame";
+import TwentyFortyEight from "./2048/TwentyFortyEight";
 import { HomeMenu } from "./shared";
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
             <Route path="/" element={<HomeMenu/>}/>
             <Route path="/gameoflife" element={<GameOfLife/>}/>
             <Route path="/beeclust" element={<Beeclust/>}/>
+            <Route path="/tetris" element={<TetrisGame/>}/>
+            <Route path="/2048" element={<TwentyFortyEight/>}/>
           </Routes>
 
           <div className="w-full fixed top-6 left-0 flex justify-start gap-4 pl-20">

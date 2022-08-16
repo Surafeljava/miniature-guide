@@ -18,7 +18,6 @@ function Beeclust() {
 
     const [numRobots, setNumRobots] = useState(100);
     const [beeSize, setBeeSize] = useState(10);
-    // const [beeSpeed, setBeeSpeed] = useState(5);
 
     const runningRef = useRef(running);
     runningRef.current = running;
