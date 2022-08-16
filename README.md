@@ -19,7 +19,7 @@ These rules, which compare the behavior of the automaton to real life, can be co
 2. Any dead cell with three live neighbours becomes a live cell.
 3. All other live cells die in the next generation. Similarly, all other dead cells stay dead.
 
-![image](https://user-images.githubusercontent.com/34341576/184716066-6011065e-3c5d-4c3b-9a70-0f971a5253c9.png)
+![image](https://user-images.githubusercontent.com/34341576/184989915-be25adb6-a689-4836-a150-29b62d0291a4.png)
 
 
 ## 2. BEECLUST Algorithm
