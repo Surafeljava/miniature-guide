@@ -31,3 +31,10 @@ https://www.argesim.org/fileadmin/user_upload_argesim/ARGESIM_Publications_OA/MA
 ![image](https://user-images.githubusercontent.com/34341576/184715652-96a0b409-78ba-4c11-86dd-bd531e44dcd9.png)
 
 
+## 3. 2048 Game
+
+https://en.wikipedia.org/wiki/2048_(video_game)
+
+2048 is played on a plain 4×4 grid, with numbered tiles that slide when a player moves them using the four arrow keys. Every turn, a new tile randomly appears in an empty spot on the board with a value of either 2 or 4. Tiles slide as far as possible in the chosen direction until they are stopped by either another tile or the edge of the grid. If two tiles of the same number collide while moving, they will merge into a tile with the total value of the two tiles that collided. The resulting tile cannot merge with another tile again in the same move. Higher-scoring tiles emit a soft glow; the highest possible tile is 131,072.
+
+![image](https://user-images.githubusercontent.com/34341576/185218817-e0f5dace-1909-49de-82fd-30a5f13835e5.png)
