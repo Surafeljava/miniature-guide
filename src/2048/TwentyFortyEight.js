@@ -18,7 +18,9 @@ const bgColors = {
     256: 'bg-green-300',
     512: 'bg-blue-200',
     1024: 'bg-blue-300',
-    2048: 'bg-yellow-300'
+    2048: 'bg-yellow-300',
+    4096: 'bg-amber-400',
+
 }
 
 function TwentyFortyEight() {
@@ -26,6 +28,8 @@ function TwentyFortyEight() {
     const [currentScore, setCurrentScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
     const [newHighScore, setNewHighScore] = useState(false);
+
+    const [previousGrid, setPreviousGrid] = useState(null);
 
     useEffect(() => {
         const score = Cookies.get('highscore');
@@ -128,6 +132,7 @@ function TwentyFortyEight() {
 
 
     const moveRight = () => {
+
         setGrid(gr => produce(gr, gridCopy => {
             gr.forEach((row,idx) => {
                 var rNew = [];
@@ -153,9 +158,13 @@ function TwentyFortyEight() {
                 //Add zero at the end of the new list
                 const rNew2 = [...Array.from(Array(numRows - rNew.length), () => 0), ...rNew];
                 gridCopy[idx] = rNew2;
+                
             });
 
+            // setPreviousGrid(gr);
+
             addNewRandomNumber();
+            
 
         }));
     }
@@ -187,6 +196,8 @@ function TwentyFortyEight() {
                 gridCopy[idx] = rNew2;
             });
 
+            
+
             addNewRandomNumber();
 
         }));
@@ -212,17 +223,20 @@ function TwentyFortyEight() {
 
         //Move left
         if(event.key === 'ArrowLeft'){
+            setPreviousGrid(grid);
             moveLeft();
         }
 
         
         //Move Right
         if(event.key === 'ArrowRight'){
+            setPreviousGrid(grid);
             moveRight();
         }
 
         //Move Down
         if(event.key === 'ArrowDown'){
+            setPreviousGrid(grid);
             transposeMatrix();
             moveRight();
             transposeMatrix();
@@ -230,6 +244,7 @@ function TwentyFortyEight() {
 
         //Move Up
         if(event.key === 'ArrowUp'){
+            setPreviousGrid(grid);
             transposeMatrix();
             moveLeft();
             transposeMatrix();
@@ -313,9 +328,14 @@ function TwentyFortyEight() {
                 }}>
                     Restart
                 </button>
-                {/* <button className="px-4 py-2 rounded-lg bg-slate-200 hover:bg-slate-300" onClick={() => console.log("Cleaning")}>
-                    Save Score
-                </button> */}
+                {previousGrid!==null && (
+                    <button className="px-4 py-2 rounded-lg bg-slate-200 hover:bg-slate-300" 
+                    onClick={() => {
+                        setGrid(previousGrid);
+                    }}>
+                        Undo
+                    </button>
+                )}
             </div>
         </div>
     );

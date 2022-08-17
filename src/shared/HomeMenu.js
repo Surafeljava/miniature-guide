@@ -4,7 +4,8 @@ const pageLinks = [
     {to: '/gameoflife', title: "Game of Life"},
     {to: '/beeclust', title: "BEECLUST"},
     {to: '/tetris', title: "Tetris Game"},
-    {to: '/2048', title: "2048"}
+    {to: '/2048', title: "2048"},
+    {to: '/new', title: "New Project Loading..."}
 ];
 
 function HomeMenu() {
