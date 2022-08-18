@@ -307,7 +307,7 @@ function TwentyFortyEight() {
                     row.map((col, j) => {
                         const bgcolor = bgColors[col];
                         return (
-                            <div id={`r${i}-c${j}`} className={`${bgcolor} hover:border hover:border-slate-700 duration-150 hover:cursor-pointer rounded-md flex justify-center items-center`} 
+                            <div key={`r${i}-c${j}`} className={`${bgcolor} hover:border hover:border-slate-700 duration-150 hover:cursor-pointer rounded-md flex justify-center items-center`} 
                             style={{width: gridSize, height: gridSize}} > 
                                 <div className="text-black font-medium text-lg">
                                     {col}

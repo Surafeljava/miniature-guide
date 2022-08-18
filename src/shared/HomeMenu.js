@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const pageLinks = [
     {to: '/gameoflife', title: "Game of Life"},
     {to: '/beeclust', title: "BEECLUST"},
-    {to: '/tetris', title: "Tetris Game"},
+    {to: '/snakegame', title: "Snake Game"},
     {to: '/2048', title: "2048"},
-    {to: '/new', title: "New Project Loading..."}
+    {to: '/tetris', title: "Tetris Game"}
 ];
 
 function HomeMenu() {
