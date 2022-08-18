@@ -82,7 +82,7 @@ function GameOfLife(){
             }}>
                 {grid.map((rows, i) => 
                 rows.map((cols, k) => 
-                <div id={`${i}-${k}`} 
+                <div key={`${i}-${k}`} 
                 onClick={() => {
                     const newGrid = produce(grid, gridCopy => {
                         gridCopy[i][k] = grid[i][k]===0 ? 1 : 0;

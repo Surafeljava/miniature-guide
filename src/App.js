@@ -3,6 +3,7 @@ import GameOfLife from "./game-of-life/GameOfLife";
 import Beeclust from "./beeclust/Beeclust";
 import TetrisGame from "./tetris-game/TetrisGame";
 import TwentyFortyEight from "./2048/TwentyFortyEight";
+import SnakeGame from "./snake-game/SnakeGame";
 import { HomeMenu } from "./shared";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/beeclust" element={<Beeclust/>}/>
             <Route path="/tetris" element={<TetrisGame/>}/>
             <Route path="/2048" element={<TwentyFortyEight/>}/>
+            <Route path="/snakegame" element={<SnakeGame/>}/>
           </Routes>
 
           <div className="w-full fixed top-6 left-0 flex justify-start gap-4 pl-20">
