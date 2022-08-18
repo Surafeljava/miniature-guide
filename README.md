@@ -38,3 +38,13 @@ https://en.wikipedia.org/wiki/2048_(video_game)
 2048 is played on a plain 4×4 grid, with numbered tiles that slide when a player moves them using the four arrow keys. Every turn, a new tile randomly appears in an empty spot on the board with a value of either 2 or 4. Tiles slide as far as possible in the chosen direction until they are stopped by either another tile or the edge of the grid. If two tiles of the same number collide while moving, they will merge into a tile with the total value of the two tiles that collided. The resulting tile cannot merge with another tile again in the same move. Higher-scoring tiles emit a soft glow; the highest possible tile is 131,072.
 
 ![image](https://user-images.githubusercontent.com/34341576/185218817-e0f5dace-1909-49de-82fd-30a5f13835e5.png)
+
+## 4. Snake Game
+
+https://en.wikipedia.org/wiki/Snake_(video_game_genre)
+
+Snake is a video game genre where the player maneuvers a growing line that becomes a primary obstacle to itself. The concept originated in the 1976 two-player arcade game Blockade from Gremlin Industries, and the ease of implementation has led to hundreds of versions (some of which have the word snake or worm in the title) for many platforms. 1982's Tron arcade game, based on the film, includes snake gameplay for the single-player Light Cycles segment. After a variant was preloaded on Nokia mobile phones in 1998, there was a resurgence of interest in snake games as it found a larger audience.
+
+![image](https://user-images.githubusercontent.com/34341576/185429992-9ab1f8a7-2f03-4bd4-984d-ef9ea6588df1.png)
+
+
