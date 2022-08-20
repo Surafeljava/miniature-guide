@@ -21,13 +21,15 @@ function HomeMenu() {
             <div className="absolute w-full min-h-screen p-40 grid grid-cols-4 gap-6">
                 {pageLinks.map((link) => {
                     return (
-                        <div className="col-span-1 pt-4 flex flex-col gap-2 items-center bg-slate-100 rounded-xl hover:z-10 hover:bg-red-100 border-t-4 border-transparent duration-200 hover:border-t-4 hover:rounded-t-sm hover:border-red-400">
+                        <div className="col-span-1 pt-4 flex flex-col items-start bg-transparent hover:z-10  duration-200 rounded-xl">
                             <Link to={link.to} 
-                            className="text-2xl font-Semibold grow flex w-full justify-center items-center hover:-translate-y-4 duration-200"> 
-                            {link.title} </Link>
-                            <div className="flex justify-center gap-8 bg-red-300 w-full pb-4 pt-4 rounded-b-xl">
-                                <a href={link.git} className="group"><FiGithub className="text-2xl group-hover:text-red-100 duration-200"/></a>
-                                <a href={link.desc} className="group"><FiLink2 className="text-2xl group-hover:text-red-100 duration-200"/></a>
+                            className="group text-2xl font-Semibold grow flex flex-col gap-3 w-full justify-center items-center bg-slate-100 hover:bg-red-100 rounded-t-xl translate-y-0 hover:-translate-y-2 duration-200"> 
+                            {link.title} 
+                            <div className="h-0.5 bg-red-400 w-0 group-hover:w-1/3 duration-300"></div>
+                            </Link>
+                            <div className="flex justify-center gap-4 bg-red-200 w-full pb-4 pt-4 rounded-b-xl">
+                                <a href={link.git} className="group px-4"><FiGithub className="text-2xl group-hover:text-red-400 group-hover:-translate-y-1 duration-200"/></a>
+                                <a href={link.desc} className="group px-4"><FiLink2 className="text-2xl group-hover:text-red-400 group-hover:-translate-y-1 duration-200"/></a>
                             </div>
                         </div>
                     );
