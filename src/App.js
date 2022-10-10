@@ -4,6 +4,7 @@ import Beeclust from "./beeclust/Beeclust";
 import TetrisGame from "./tetris-game/TetrisGame";
 import TwentyFortyEight from "./2048/TwentyFortyEight";
 import SnakeGame from "./snake-game/SnakeGame";
+import BfsAlgorithm from "./bfs-algorithm/BfsAlgorithm";
 import { HomeMenu } from "./shared";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/tetris" element={<TetrisGame/>}/>
             <Route path="/2048" element={<TwentyFortyEight/>}/>
             <Route path="/snakegame" element={<SnakeGame/>}/>
+            <Route path="/bfsalgorithm" element={<BfsAlgorithm/>}/>
           </Routes>
 
           <div className="w-full fixed top-6 left-0 flex justify-start gap-4 pl-20">
