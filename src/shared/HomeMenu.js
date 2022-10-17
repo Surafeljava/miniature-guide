@@ -8,7 +8,8 @@ const pageLinks = [
     {to: '/snakegame', title: "Snake Game", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/snake-game', desc: 'https://en.wikipedia.org/wiki/Snake_(video_game_genre)'},
     {to: '/2048', title: "2048 Game", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/2048', desc: 'https://en.wikipedia.org/wiki/2048_(video_game)'},
     {to: '/tetris', title: "Tetris Game", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/tetris-game', desc: 'https://github.com/Surafeljava/miniature-guide'},
-    {to: '/bfsalgorithm', title: "BFS Search Algorithm", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/tetris-game', desc: 'https://github.com/Surafeljava/miniature-guide'}
+    {to: '/bfsalgorithm', title: "BFS Search Algorithm", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/tetris-game', desc: 'https://github.com/Surafeljava/miniature-guide'},
+    {to: '/followtheleader', title: "Follow the Leader Algorithm", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/tetris-game', desc: 'https://github.com/Surafeljava/miniature-guide'}
 ];
 
 function HomeMenu() {
