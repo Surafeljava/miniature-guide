@@ -7,6 +7,7 @@ import SnakeGame from "./snake-game/SnakeGame";
 import BfsAlgorithm from "./bfs-algorithm/BfsAlgorithm";
 import FollowTheLeader from "./follow-the-leader/FollowTheLeader";
 import SandFall from "./sandfall/SandFall";
+import FramerTest from "./framer/FramerTest";
 import { HomeMenu } from "./shared";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/bfsalgorithm" element={<BfsAlgorithm/>}/>
             <Route path="/followtheleader" element={<FollowTheLeader/>}/>
             <Route path="/sandfall" element={<SandFall/>}/>
+            <Route path="/framertest" element={<FramerTest/>}/>
           </Routes>
 
           <div className="w-full fixed top-6 left-0 flex justify-start gap-4 pl-20">
