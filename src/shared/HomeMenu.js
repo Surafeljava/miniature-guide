@@ -12,6 +12,8 @@ const pageLinks = [
     {to: '/followtheleader', title: "Follow the Leader Algorithm", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/tetris-game', desc: 'https://github.com/Surafeljava/miniature-guide'},
     {to: '/sandfall', title: "Sand Fall", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/tetris-game', desc: 'https://github.com/Surafeljava/miniature-guide'},
     {to: '/framertest', title: "Framer Motion Test", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/tetris-game', desc: 'https://github.com/Surafeljava/miniature-guide'},
+    {to: '/breaker', title: "Breaker", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/tetris-game', desc: 'https://github.com/Surafeljava/miniature-guide'},
+    {to: '/flappybird', title: "Flappy Bird", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/tetris-game', desc: 'https://github.com/Surafeljava/miniature-guide'},
 ];
 
 function HomeMenu() {

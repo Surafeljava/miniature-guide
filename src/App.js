@@ -8,6 +8,8 @@ import BfsAlgorithm from "./bfs-algorithm/BfsAlgorithm";
 import FollowTheLeader from "./follow-the-leader/FollowTheLeader";
 import SandFall from "./sandfall/SandFall";
 import FramerTest from "./framer/FramerTest";
+import Breaker from "./breaker/Breaker";
+import FlappyBird from "./flappybird/FlappyBird";
 import { HomeMenu } from "./shared";
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
             <Route path="/followtheleader" element={<FollowTheLeader/>}/>
             <Route path="/sandfall" element={<SandFall/>}/>
             <Route path="/framertest" element={<FramerTest/>}/>
+            <Route path="/breaker" element={<Breaker/>}/>
+            <Route path="/flappybird" element={<FlappyBird/>}/>
           </Routes>
 
           <div className="w-full fixed top-6 left-0 flex justify-start gap-4 pl-20">
