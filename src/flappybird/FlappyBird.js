@@ -6,8 +6,8 @@ import bg_image from '../assets/flappy/bg.png';
 
 function FlappyBird() {
 
-    const WINDOW_HEIGHT = 700;
-    const WINDOW_WIDTH = 1500;
+    const WINDOW_HEIGHT = window.innerHeight*0.9;
+    const WINDOW_WIDTH = window.innerWidth*0.95;
     const BIRD_SIZE = 40;
     const PIPE_GAP = 200;
 
@@ -149,15 +149,19 @@ function FlappyBird() {
                     <img src={bird} alt="bird" style={{width: BIRD_SIZE, height: BIRD_SIZE}} className='resize-contain' />
                 </div>
 
-                <div className='absolute top-0 left-0 w-full z-20 flex justify-center items-center pt-5'>
+
+                <div className='absolute top-0 left-0 w-full z-10 flex justify-center items-center pt-5'>
                     <div className='px-4 py-2 bg-white rounded-lg flex flex-row items-center gap-1'>
                         <h2 className='font-[400] text-sm'>My score:</h2>
                         <h2 className='font-[800] text-md'>{score}</h2>
                     </div>
                 </div>
+                
+                <div onClick={handleJump} className='absolute top-0 left-0 w-full h-full bg-[#00000000] z-50 flex justify-center items-center'>
+                </div>
 
                 {gameOver && (
-                    <div className='absolute top-0 left-0 w-full h-full bg-[#00000022] z-30 flex justify-center items-center'>
+                    <div className='absolute top-0 left-0 w-full h-full bg-[#00000022] z-50 flex justify-center items-center'>
                         <div className='px-10 py-6 bg-white rounded-lg flex flex-col items-center gap-3'>
                             <h2 className='font-[400] text-xl tracking-wider'>GAME OVER!</h2>
                             <button onClick={restartGame} className='px-4 py-2 bg-green-500 rounded-md'>
