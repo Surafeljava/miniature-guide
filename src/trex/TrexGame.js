@@ -14,11 +14,11 @@ function TrexGame() {
     const trexRef = useRef(trexPosition);
 
     const [velocity, setVelocity] = useState(0);
-    const [gravity, setGravity] = useState(1);
+    const gravity = 1;
 
     // w:3 or w:5 & pos
     const [cactuses, setCactuses] = useState([]);
-    const [floor, setFloor] = useState([]);
+    // const [floor, setFloor] = useState([]);
 
     const [gameOver, setGameOver] = useState(false);
     const gameOverRef = useRef(gameOver);
@@ -43,6 +43,7 @@ function TrexGame() {
                 handleCheckCollission(cactus);
             }
         }
+        // eslint-disable-next-line
     }, [cactuses])
 
     const generateTheNextCactus = () => {
@@ -65,6 +66,7 @@ function TrexGame() {
         }, 2000);
 
         return () => clearInterval(interval);
+        // eslint-disable-next-line
     }, [])
 
     const handleUpdateCactuses = () => {
@@ -82,6 +84,7 @@ function TrexGame() {
         }, 1000/580);
 
         return () => clearInterval(interval);
+        // eslint-disable-next-line
     }, [cactuses])
 
     const handleJump = () => {
@@ -101,6 +104,7 @@ function TrexGame() {
 
     useEffect(() => {
         moveBirdOnArrowKeys();
+        // eslint-disable-next-line
     }, [])
 
     const updateTrexPosition = (new_value) => {
@@ -128,6 +132,7 @@ function TrexGame() {
         }, 1000/60);
 
         return () => clearInterval(interval);
+        // eslint-disable-next-line
     }, [velocity, trexPosition, gravity]);
 
 

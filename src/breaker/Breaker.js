@@ -12,6 +12,7 @@ function Breaker() {
 
     const [ballPosition, setBallPosition] = useState({x: 0, y: 0});
     const [ballVelocity, setBallVelocity] = useState({x: 6, y: 6});
+    // eslint-disable-next-line
     const [ballAcceleration, setBallAcceleration] = useState({x: 0, y: 0});
 
     const [pauseVelocity, setPauseVelocity] = useState({x:0, y:0});
@@ -59,6 +60,7 @@ function Breaker() {
 
     useEffect(() => {
         movePaddleOnArrowKeys();
+        // eslint-disable-next-line
     }, [])
 
 
@@ -77,6 +79,7 @@ function Breaker() {
 
     useEffect(() => {
         generateRandomBlocks();
+        // eslint-disable-next-line
     }, [])
 
     const checkCollisionAndUpdateVelocity = () => {
@@ -117,6 +120,7 @@ function Breaker() {
         }, 1000 / 60);
 
         return () => clearInterval(collisionCheckInterval);
+        // eslint-disable-next-line
     }, [ballPosition, blocks]);
 
     useEffect(() => {
@@ -135,6 +139,7 @@ function Breaker() {
         }, 1000 / 60);
 
         return () => clearInterval(intervalId);
+        // eslint-disable-next-line
     }, [ballPosition, ballVelocity]);
 
     return (

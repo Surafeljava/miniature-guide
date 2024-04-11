@@ -45,6 +45,7 @@ function FlappyBird() {
     useEffect(() => {
         generateRandomPipeLocations();
         // console.log(pipes);
+        // eslint-disable-next-line
     }, [pipes])
 
     const checkForBirdBlockCollition = () => {
@@ -68,6 +69,7 @@ function FlappyBird() {
 
     useEffect(() => {
         checkForBirdBlockCollition();
+        // eslint-disable-next-line
     }, [pipes])
 
     useEffect(() => {
@@ -81,6 +83,7 @@ function FlappyBird() {
         }, 1000/60);
 
         return () => clearInterval(interval);
+        // eslint-disable-next-line
     }, [pipes]);
 
     const handleJump = () => {
@@ -101,6 +104,7 @@ function FlappyBird() {
 
     useEffect(() => {
         moveBirdOnArrowKeys();
+        // eslint-disable-next-line
     }, [])
 
     useEffect(() => {
@@ -112,6 +116,7 @@ function FlappyBird() {
         }, 1000/60);
 
         return () => clearInterval(interval);
+        // eslint-disable-next-line
     }, [velocity, birdPosition, gravity]);
 
     useEffect(() => {
@@ -119,6 +124,7 @@ function FlappyBird() {
         if((birdPosition+50)>=WINDOW_HEIGHT){
             setGameOver((prev) => true);
         }
+        // eslint-disable-next-line
     }, [birdPosition])
 
     const restartGame = () => {

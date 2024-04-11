@@ -14,7 +14,7 @@ const pageLinks = [
     {to: '/framertest', title: "Framer Motion Test", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/tetris-game', desc: 'https://github.com/Surafeljava/miniature-guide'},
     {to: '/breaker', title: "Breaker", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/tetris-game', desc: 'https://github.com/Surafeljava/miniature-guide'},
     {to: '/flappybird', title: "Flappy Bird", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/tetris-game', desc: 'https://github.com/Surafeljava/miniature-guide'},
-    {to: '/trex', title: "Google Trex", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/tetris-game', desc: 'https://github.com/Surafeljava/miniature-guide'},
+    {to: '/trex', title: "Stroke Guy", git: 'https://github.com/Surafeljava/miniature-guide/tree/main/src/tetris-game', desc: 'https://github.com/Surafeljava/miniature-guide'},
 ];
 
 function HomeMenu() {
