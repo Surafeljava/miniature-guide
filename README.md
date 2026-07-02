@@ -1,6 +1,7 @@
 # Experimenting with algorithms
 
 This project is done to experiment on some algorithms and run simulations
+https://miniature-guide-nu.vercel.app/
 
 ## 1. Conway's Game of Life
 
